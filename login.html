@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <span class="brand-text">
+        <span class="happy">Happy</span><span class="coding">Coding</span>
+      </span>
+    </ul>
+    <ul>
+      <li><a href="/Navbar with side bar/blog.html">Blog</a></li>
+      <li><a href="/Navbar with side bar/products.html">Products</a></li>
+      <li><a href="/Navbar with side bar/about.html">About</a></li>
+      <li><a href="/Navbar with side bar/forum.html">Forum</a></li>
+      <li><a href="/Navbar with side bar/index.html">Home</a></li>
+      <li><button class="sidebar-toggle-btn" onclick="toggleSidebar()">☰</button></li>
+    </ul>
+  </nav>
+
+  <ul class="side-bar" id="sidebar">
+    <button class="close-btn" onclick="closeSidebar()">✕</button>
+    <li>
+    <li>
+      <span class="brand-text">
+        <span class="happy">Happy</span><span class="coding">Coding</span>
+      </span>
+    </li>
+    </li>
+    <li><a href="/Navbar with side bar/blog.html">Blog</a></li>
+    <li><a href="/Navbar with side bar/products.html">Products</a></li>
+    <li><a href="/Navbar with side bar/about.html">About</a></li>
+    <li><a href="/Navbar with side bar/forum.html">Forum</a></li>
+    <li><a href="/Navbar with side bar/index.html">Home</a></li>
+  </ul>
+
+  <script>
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+
+    function toggleSidebar() {
+      sidebar.classList.toggle("active");
+      overlay.classList.toggle("active");
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove("active");
+      overlay.classList.remove("active");
+    }
+  </script>
+  <h1 style="color: white;">lagi diproses</h1>
+</body>
+</html>

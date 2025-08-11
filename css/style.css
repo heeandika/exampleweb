@@ -1,0 +1,268 @@
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-image: url('../sorce/pemandangan.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    nav{
+      background-color: #65779dff;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      position: relative;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      margin: 0 10px;
+    }
+
+    nav a {
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #d4f5e3;
+      display: block;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background-color: #4e5c78;
+    }
+
+    nav, h1 {
+      animation: slideDown 0.5s ease-in-out;
+    }
+
+    nav a,
+    .side-bar a {
+      position: relative;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #d4f5e3;
+      display: block;
+      border-radius: 4px;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after,
+    .side-bar a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 4px;
+      width: 0%;
+      height: 2px;
+      background-color: #d4f5e3;
+      transition: width 0.3s ease;
+    }
+
+    nav a,
+    .side-bar a {
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #d4f5e3;
+      display: block;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      transform: scale(1);
+    }
+
+    nav a:hover,
+    .side-bar a:hover {
+      background-color: #4e5c78;
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+
+    nav a:hover::after,
+    .side-bar a:hover::after {
+      width: 70%;
+    }
+
+    nav a:hover,
+    .side-bar a:hover {
+      background-color: transparent;
+
+    }
+
+    .sidebar-toggle-btn,
+    .close-btn {
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar-toggle-btn:hover,
+    .close-btn:hover {
+      transform: rotate(10deg) scale(1.1);
+    }
+
+    .brand-text {
+      display: block;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 8px 16px;
+    }
+
+    .happy {
+      color: #63cbff;
+      font-size: 35px;
+    }
+
+    .coding {
+      color: #6e2c9e;
+      font-size: 18px;
+    }
+
+    .side-bar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 280px;
+      background-color: #65779dbb;
+      backdrop-filter: blur(10px);
+      box-shadow: -10px 0 15px rgba(0, 0, 0, 0.2);
+      padding-top: 90px;
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: all 0.3s ease;
+      z-index: 1100;
+      list-style: none;
+    }
+
+    .side-bar a {
+      padding: 10px 20px;
+      width: 100%;
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+
+    .side-bar.active {
+      display: flex;
+      animation: slideIn 0.3s forwards;
+    }
+
+    .side-bar li {
+      width: 100%;
+      padding: 12px 0;
+    }
+
+    .side-bar a {
+      padding: 18px 28px;
+      width: 100%;
+      display: block;
+      color: #d4f5e3;
+    }
+
+    .sidebar-toggle-btn {
+      background: none;
+      border: none;
+      color: #d4f5e3;
+      font-size: 28px;
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 4px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: #dc2d2dff;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: rgba(0, 0, 0, 0.2);
+      display: none;
+      z-index: 1050;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    .sidebar-toggle-btn {
+      margin-left: 10px;
+      margin-right: 20px;
+    }
+
+    .sidebar-toggle-btn button,
+    .sidebar-toggle-btn a {
+      font-size: 20px;
+      padding: 10px;
+      background: none;
+      border: none;
+      color: #d4f5e3;
+      cursor: pointer;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        right: -260px;
+        opacity: 0;
+      }
+
+      to {
+        right: 0;
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      nav ul:nth-child(2) li:not(:last-child) {
+        display: none;
+      }
+
+      .sidebar-toggle-btn {
+        display: block;
+      }
+    }
