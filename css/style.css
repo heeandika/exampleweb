@@ -47,14 +47,8 @@ nav li {
 nav a {
   padding: 8px 16px;
   text-decoration: none;
-  color: #d4f5e3;
   display: block;
   border-radius: 4px;
-}
-
-/* Efek hover background menu navbar */
-nav a:hover {
-  background-color: #4e5c78;
 }
 
 /* Animasi masuk navbar & h1 dari atas */
@@ -133,9 +127,7 @@ nav a:hover,
 
 /* Brand teks logo */
 .brand-text {
-  display: block;
   font-weight: bold;
-  font-size: 18px;
   padding: 8px 16px;
 }
 
