@@ -19,7 +19,7 @@ body {
 /* Styling navbar: warna latar, bayangan, layout flex, dan padding */
 nav {
   background-color: #65779dff;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   display: flex;
   align-items: center;
@@ -67,6 +67,84 @@ nav a,
   border-radius: 4px;
   transition: color 0.3s ease;
 }
+/* Animasi fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(10);
+  }
+}
+
+/* Kotak utama */
+.absensi-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(101, 119, 157, 0.9);
+  padding: 20px 30px;
+  border-radius: 12px;
+  min-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  color: white;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Judul */
+.absensi-box h2 {
+  margin-bottom: 15px;
+}
+
+/* Daftar absensi */
+.absensi-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Kotak tiap item absensi - persegi panjang penuh */
+.absensi-item {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px 20px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+/* Delay animasi setiap item */
+.absensi-item:nth-child(1) { animation-delay: 0.2s; }
+.absensi-item:nth-child(2) { animation-delay: 0.4s; }
+.absensi-item:nth-child(3) { animation-delay: 0.6s; }
+
+/* Kolom teks */
+.absensi-item span {
+  flex: 1;
+  text-align: center;
+}
+
+/* Warna khusus */
+.absensi-item .nama {
+  font-weight: bold;
+  color: #63cbff;
+}
+
+.absensi-item .nik {
+  color: #ffffff;
+}
+
+.absensi-item .waktu {
+  color: #a3f7b5;
+}
+
 
 /* Garis bawah animasi saat hover */
 nav a::after,
